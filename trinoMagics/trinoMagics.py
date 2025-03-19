@@ -2,7 +2,7 @@ from IPython.core.magic import magics_class, Magics, line_magic, cell_magic, reg
 
 from IPython.core.magic_arguments import argument, magic_arguments, parse_argstring
 
-import get_trino_connection.get_trino_connection
+from trinoMagics.get_trino_connection import get_trino_connection
 
 
 @magics_class
@@ -39,7 +39,7 @@ class TrinoMagic(Magics):
 
             if df_name:
                 self.shell.user_ns[df_name] = df
-                print(f"DataFrame '{df_name}' created with {len(df)} rows."}
+                print(f"DataFrame '{df_name}' created with {len(df)} rows.")
             else:
                 print("No DataFrame name provided. Displaying results:")
                 return df.head()
