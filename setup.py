@@ -6,6 +6,7 @@ setup(
     packages=find_packages(),
     install_requires=[
         "IPython>=7.0",
+        "trino>=0.331.0",
     ],
     include_package_data=True,
     entry_points={
