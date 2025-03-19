@@ -1,9 +1,13 @@
-from IPython.core.magic import magics_class, Magics, line_magic, cell_magic, register_line_magic
+from IPython.core.magic import magics_class, Magics, cell_magic
 
-from IPython.core.magic_arguments import argument, magic_arguments, parse_argstring
+from IPython import get_ipython
 
 from trinoMagics.get_trino_connection import get_trino_connection
 
+import re
+
+import trino
+from trino.auth import BasicAuthentication
 
 @magics_class
 class TrinoMagic(Magics):
