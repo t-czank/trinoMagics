@@ -1,3 +1,9 @@
+import re
+
+import trino
+from trino.auth import BasicAuthentication
+from trino.dbapi import connect
+
 # Create Trino connection function
 def get_trino_connection():
     return trino.dbapi.connect(
